@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+    
+    <title>STUDY AI - RJRD.000.PE</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="res/1.css">
+  
+    <!--META Tags-->
+      <meta property="og:title" content="STUDY AI by RJRD">
+    <meta property="og:description" content="Study Ai helps your study ">
+    <meta property="og:url" content="http://rjrd.000.pe/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="STUDY AI">
+    <meta property="og:locale" content="en_US">
+    
+    <!--HDJJS-->
+   
+</head>
+
+<body>
+    <h1>StudyGPT</h1>
+
+    <fieldset>
+        <legend>ASK ME?</legend>
+
+        <div id="apiResult">Hi Welcome to StudyAI</div>
+        <form id="promptForm">
+            <input type="text" id="prompt" name="prompt">
+           
+            <input type="submit" value="Submit" id="submitButton"><br>
+         
+            <button id="copyResultBtn" onclick="copyResult()">
+<i  class="fa fa-clone">Copy Results</i></button>
+<button id="myBtn"><i  class="fa fa-user-circle">About</i></button>
+        </form>
+      
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" id="closeBtn">&times;</span>
+        <p>Study AI is a Simple AI tool free and unlimited</p>
+        <details>
+	<summary>DEVELOPER:
+	</summary>
+        <p>-Develop by: DSTRYR</p>
+        <a href="https://www.facebook.com/dstryr.official "><i  class="fa fa-facebook-official"> /dstryr.official</i></a>
+        <br>
+        <hr></hr>
+        </details> 
+        <details>
+	<summary>CREDITS:
+	</summary>
+	<section>
+	<p>OPEN AI </p>
+	</section>
+	</details> 
+	 <details>
+	<summary>FACEBOOK BOT ACCOUNT 
+	</summary>
+	    <p>Facebook Bot may sometimes down please report to my profile so we can fix</p>
+        <a href="https://www.facebook.com/profile.php?id=100082278594952 "><i  class="fa fa-facebook-official"> YET YET YET</i></a>
+	</details> 
+    </div>
+
+</div>
+	
+    </fieldset>
+    
+    <p style="text-align: center ">©️DSTRYRxHard 2023</p>
+      <script src="res/modal.js"> </script>
+    <script>
+        $(document).ready(function () {
+            $('#promptForm').submit(function (e) {
+                e.preventDefault(); // Prevent the default form submission
+
+                var newPrompt = $('#prompt').val();
+
+                // Disable the submit button and change its text to "Loading"
+                $('#submitButton').prop('disabled', true).val('Loading...');
+
+                $.ajax({
+                    url: 'DSTRYR.php',
+                    method: 'GET',
+                    data: {prompt: newPrompt},
+                    success: function (data) {
+                        $('#apiResult').html("<p>" + data + "</p>");
+                    },
+                    error: function () {
+                        $('#apiResult').html("Error fetching data.");
+                    },
+                    complete: function () {
+                        // Re-enable the submit button and change its text back to "Submit"
+                        $('#submitButton').prop('disabled', false).val('Submit');
+                    }
+                });
+            });
+        });
+
+        function copyResult() {
+            var resultText = $('#apiResult p').text();
+            var dummyElement = document.createElement("textarea");
+            document.body.appendChild(dummyElement);
+            dummyElement.value = resultText;
+            dummyElement.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummyElement);
+        }
+    </script>
+</body>
+</html>
