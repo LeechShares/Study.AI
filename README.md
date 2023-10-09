@@ -1,2 +1,13 @@
 # Study.AI
-Simple AI tool
+IS A SIMPLE AI Tool Made by the Lazy Developer Rejard or known as cyber name DSTRYR
+
+#Social 
+- Facebook :
+https://www.facebook.com/rejardbentazarofficial
+
+#Portfolio 
+- Website:
+http://dstryrlangsakalam.hstn.me 
+
+
+#🌱CREDITS TO API OWNER 
