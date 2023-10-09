@@ -1,0 +1,91 @@
+ body {
+    
+    background-color: black
+    }
+    legend, fieldset {
+    border: 2px solid lime;
+     border-radius: 2px;
+     background-color: black;
+      color: lime;
+     
+    }
+    h1 {
+    
+     color: lime;
+    
+    }
+     h2 {
+    
+     color: lime;
+    }
+    
+  
+    p {
+     color: lime;
+    }
+    #prompt {
+            background-color: black;
+            color: lime;
+            border: 1px solid lime;
+            font-family: "Courier New", monospace;
+            padding: 5px;
+        }
+
+        #prompt::placeholder {
+            color: lime;
+        }
+
+        #prompt:focus {
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: black;
+            color: lime;
+            border: 1px solid lime;
+            font-family: "Courier New", monospace;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: lime;
+            color: black;
+        }
+        button {
+         background-color: lime;
+            color: black;
+        }
+          
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0,0,0,0.7); /* Black background with opacity */
+        }
+
+    
+        .modal-content {
+            background-color: black;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid lime;
+            width: 80%; 
+        }
+
+        /* Close button style */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+       a {
+       text-decoration: none;
+       color: yellow;
+       }
